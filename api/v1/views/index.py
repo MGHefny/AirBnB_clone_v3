@@ -11,20 +11,20 @@ from models.state import State
 from models.user import User
 
 
-classes = {"amenities": Amenity, "cities": City,
-           "places": Place, "reviews": Review,
-           "states": State, "users": User}
+classes = {"amenities": Amenity, "cities": City, "places": Place,
+           "reviews": Review, "states": State,
+           "users": User}
 
 
-@app_views.route("/status")
+@app_views.route('/status')
 def api_stat():
-    """check"""
-    return jsonify({"status": "OK"})
+    """ check """
+    return jsonify({'status': 'OK'})
 
 
-@app_views.route("/stats")
+@app_views.route('/stats')
 def count_stats():
-    """check"""
+    '''check'''
     stats_count = {}
     for cls in classes:
         stats_count[cls] = storage.count(classes[cls])
