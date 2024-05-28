@@ -17,8 +17,7 @@ classes = {
     "places": Place,
     "reviews": Review,
     "states": State,
-    "users": User,
-}
+    "users": User}
 
 
 @app_views.route("/status")
